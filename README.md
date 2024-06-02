@@ -1,5 +1,11 @@
 # Les info utiles
 
+Pour installer les packages pythons (si vous ne les avez pas déjà) :
+
+`pip install <nom du package>` => `pip install uvicorn`
+
+Selon votre version de python et/ou votre installation, vous devrez peut-être plutôt utiliser : `python -m pip install <nom du package>`
+
 Utilisez la commande `uvicorn main:app --port 8000` pour lancer le serveur (API REST)
 
 Utilisez la commande `pytest` pour lancer vos tests
