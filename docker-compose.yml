@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  db:
+    # docker run --name mongodb_exam mongo:latest
+    image: mongo:latest
+    container_name: mongodb_exam
+    
+  back:
+    # docker build -f Dockerfile .
+    # docker run abc --name back_exam -p 8000:8000
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: back_exam
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+# Pour lancer : docker compose up --build
+# Pour eteindre : docker compose down
