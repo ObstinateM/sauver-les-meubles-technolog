@@ -7,8 +7,11 @@ services:
     container_name: mongodb_exam
     
   back:
-    # docker build -f Dockerfile .
-    # docker run abc --name back_exam -p 8000:8000
+    # "abc" est le nom de l'image, en vériter docker compose en génére un automatiquement via son hash
+    # docker build -f Dockerfile -t abc .
+    # docker run --name back_exam -p 8000:8000 abc
+    # pour les ports, le premier est le port de la machine et le second est le port du container
+    # ex. machine:container
     build:
       context: .
       dockerfile: Dockerfile
